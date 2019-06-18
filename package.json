@@ -1,0 +1,113 @@
+{
+    "name": "AngularNest-Fullstack-CNode",
+    "version": "1.0.0",
+    "description": "A fullstack JavaScript cnode project",
+    "scripts": {
+        "ng": "ng",
+        "start": "concurrently --handle-input \"npm run start:server\" \"npm run start:client\"",
+        "start:client": "ng serve",
+        "build:client": "ng build",
+        "test:client": "ng test",
+        "lint:client": "ng lint",
+        "e2e:client": "ng e2e",
+        "nest": "nest",
+        "build:server": "tsc -p tsconfig.build.json",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "start:server": "concurrently --handle-input \"wait-on dist/server/main.js && nodemon\" \"tsc -w -p tsconfig.build.json\" ",
+        "start:server:debug": "nodemon --config nodemon-debug.json",
+        "prestart:server:prod": "rimraf dist && npm run build",
+        "start:server:prod": "node dist/server/main.js",
+        "lint:server": "tslint -p tsconfig.json -c tslint.json",
+        "test:server": "jest",
+        "test:server:watch": "jest --watch",
+        "test:server:cov": "jest --coverage",
+        "test:server:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+        "test:server:e2e": "jest --config ./test/jest-e2e.json"
+    },
+    "dependencies": {
+        "@nestjs/common": "^6.0.0",
+        "@nestjs/core": "^6.0.0",
+        "@nestjs/platform-express": "^6.0.0",
+        "reflect-metadata": "^0.1.12",
+        "rimraf": "^2.6.2",
+        "@angular/animations": "~8.0.1",
+        "@angular/common": "~8.0.1",
+        "@angular/compiler": "~8.0.1",
+        "@angular/core": "~8.0.1",
+        "@angular/forms": "~8.0.1",
+        "@angular/platform-browser": "~8.0.1",
+        "@angular/platform-browser-dynamic": "~8.0.1",
+        "@angular/router": "~8.0.1",
+        "rxjs": "~6.4.0",
+        "tslib": "^1.9.0",
+        "zone.js": "~0.9.1"
+    },
+    "devDependencies": {
+        "@nestjs/testing": "^6.0.0",
+        "@types/express": "^4.16.0",
+        "@types/jest": "^23.3.13",
+        "@types/node": "~8.9.4",
+        "@types/supertest": "^2.0.7",
+        "concurrently": "^4.1.0",
+        "jest": "^23.6.0",
+        "nodemon": "^1.18.9",
+        "prettier": "^1.15.3",
+        "supertest": "^3.4.1",
+        "ts-jest": "24.0.2",
+        "tsconfig-paths": "3.8.0",
+        "tslint": "5.16.0",
+        "ts-node": "8.1.0",
+        "typescript": "3.4.3",
+        "wait-on": "^3.2.0",
+        "@angular-devkit/build-angular": "~0.800.0",
+        "@angular/cli": "~8.0.3",
+        "@angular/compiler-cli": "~8.0.1",
+        "@angular/language-service": "~8.0.1",
+        "@types/jasmine": "~3.3.8",
+        "@types/jasminewd2": "~2.0.3",
+        "codelyzer": "^5.0.0",
+        "jasmine-core": "~3.4.0",
+        "jasmine-spec-reporter": "~4.2.1",
+        "karma": "~4.1.0",
+        "karma-chrome-launcher": "~2.2.0",
+        "karma-coverage-istanbul-reporter": "~2.0.1",
+        "karma-jasmine": "~2.0.1",
+        "karma-jasmine-html-reporter": "^1.4.0",
+        "protractor": "~5.4.0"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "rootDir": "src/server",
+        "testRegex": ".spec.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": "ts-jest"
+        },
+        "coverageDirectory": "./coverage/server",
+        "testEnvironment": "node"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jiayisheji/AngularNest-Fullstack-CNode.git"
+    },
+    "private": true,
+    "keywords": [
+        "angular",
+        "nestjs",
+        "typescript",
+        "rxjs",
+        "cli"
+    ],
+    "author": {
+        "name": "jiayi",
+        "email": "690405541@qq.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jiayisheji/AngularNest-Fullstack-CNode/issues"
+    },
+    "homepage": "https://github.com/jiayisheji/AngularNest-Fullstack-CNode#readme"
+}
