@@ -1,0 +1,7 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "beautify.config": {
+    "indent_size": 2
+  },
+  "vsicons.presets.angular": true
+}
