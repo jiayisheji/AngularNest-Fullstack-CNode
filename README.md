@@ -53,7 +53,6 @@ To clone the project, run
 
 ```bash
 git clone https://github.com/jiayisheji/AngularNest-Fullstack-CNode.git
-npm 
 ```
 
 ### Installing the dependencies
@@ -98,15 +97,15 @@ Keeping in mind that you need to have the Angular app built and a mongodb and re
 
 ## Documentation
 
-- [Angular Docs](https://angular.io/docs) 
-- [NestJS Docs](https://docs.nestjs.com) 
-- [Typescript Docs](http://www.typescriptlang.org/) 
-- [Rxjs Docs](https://rxjs.dev/api) 
-- [Typeorm Docs](https://typeorm.io/#/) 
-- [Ioredis Docs](https://github.com/luin/ioredis/blob/master/API.md) 
-- [Graphql Docs](https://graphql.org/) 
-- [Passport Docs](http://www.passportjs.org/) 
-- [JWT Docs](https://jwt.io/) 
+- [Angular Docs](https://angular.io/docs)
+- [NestJS Docs](https://docs.nestjs.com)
+- [Typescript Docs](http://www.typescriptlang.org/)
+- [Rxjs Docs](https://rxjs.dev/api)
+- [Typeorm Docs](https://typeorm.io/#/)
+- [Ioredis Docs](https://github.com/luin/ioredis/blob/master/API.md)
+- [Graphql Docs](https://graphql.org/)
+- [Passport Docs](http://www.passportjs.org/)
+- [JWT Docs](https://jwt.io/)
 
 ## Support
 
