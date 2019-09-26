@@ -31,11 +31,13 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^8.0.0",
+    "@angular/animations": "^8.0.2",
+    "@angular/cdk": "^8.0.1",
     "@angular/common": "^8.0.0",
     "@angular/compiler": "^8.0.0",
     "@angular/core": "^8.0.0",
     "@angular/forms": "^8.0.0",
+    "@angular/material": "^8.0.1",
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
@@ -51,6 +53,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.800.0",
+    "@angular-devkit/build-ng-packagr": "^0.801.1",
     "@angular/cli": "8.0.0",
     "@angular/compiler-cli": "^8.0.0",
     "@angular/language-service": "^8.0.0",
@@ -73,6 +76,7 @@
     "jest": "24.1.0",
     "jest-preset-angular": "7.0.0",
     "lint-staged": "^8.2.1",
+    "ng-packagr": "^5.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "1.16.4",
     "rimraf": "^2.6.3",
@@ -83,19 +87,22 @@
     "stylelint-scss": "^3.8.0",
     "ts-jest": "24.0.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.35.0",
     "tslint": "~5.11.0",
     "typescript": "~3.4.5"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS HUSKY_USE_YARN",
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "linters": {
       "{apps,libs}/**/*.{ts,json,md,scss,html}": [
-        "nx format:write -- --uncommitted",
+        "npm run affected:lint  --uncommitted --parallel --fix",
+        "npm run format:write --uncommitted",
         "git add"
       ]
     }
