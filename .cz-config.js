@@ -35,7 +35,7 @@ module.exports = {
     },
     {
       value: 'ci',
-      name: '主要目的是修改项目继续集成流程(例如 Travis， Jenkins， GitLab CI， Circle等) 的提交',
+      name: '主要目的是修改项目持续集成流程(例如 Travis， Jenkins， GitLab CI， Circle等) 的提交',
     },
     {
       value: 'chore',
@@ -51,14 +51,7 @@ module.exports = {
     },
   ],
   // 自定义scopes
-  scopes: [
-    { name: 'docs' },
-    { name: 'libs' },
-    { name: 'app' },
-    { name: 'api' },
-    { name: 'tools' },
-    { name: 'scripts' },
-  ],
+  scopes: [{ name: 'docs' }, { name: 'libs' }, { name: 'webapp' }, { name: 'api' }, { name: 'tools' }, { name: 'scripts' }],
 
   allowTicketNumber: false,
   isTicketNumberRequired: false,
